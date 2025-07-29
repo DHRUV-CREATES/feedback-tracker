@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Tracker</title>
+  <link rel="icon" type="image/png" href="feedback.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>📬 Feedback Tracker</h1>
+<!-- Role Selection -->
+<div class="role-selector">
+  <label for="role">Select Role:</label>
+  <select id="role" onchange="setRole(this.value)">
+    <option value="user">User</option>
+    <option value="admin">Admin</option>
+  </select>
+</div>
+
+
+  <!-- Feedback Form -->
+  <form id="feedbackForm">
+    <input type="text" id="user" placeholder="Your Name" required />
+    <input type="text" id="title" placeholder="Title" required />
+    <textarea id="description" placeholder="Describe the issue..." required></textarea>
+    
+    <label for="priority">Priority:</label>
+    <select id="priority">
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <!-- Dashboard Summary -->
+  <div id="dashboardSummary"></div>
+
+  <!-- Feedback List -->
+  <h2>Feedback List</h2>
+  <div id="feedbackList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
